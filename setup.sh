@@ -6,3 +6,5 @@ npm install gulp -D
 
 npm install
 npm install --save-dev gulp
+
+gulp

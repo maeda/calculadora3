@@ -35,3 +35,5 @@ hs_err_pid*
 hs_err_pid*
 
 .idea
+src/main/resources/node_modules
+src/main/resources/vendor

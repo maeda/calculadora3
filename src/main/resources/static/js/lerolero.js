@@ -3,13 +3,13 @@ angular.module('leroleroApp', ['ngResource'])
         $resourceProvider.defaults.stripTrailingSlashes = false;
     }])
     .factory('Api', ['$resource', function($resource){
-        return $resource('http://localhost:8080/api')
+        return $resource('http://localhost:8080/api'); // TODO (maedabr) pegar a url por ambiente
     }])
     .controller('LeroLeroController', ['Api', function(Api) {
         var vm = this;
-        vm.model = [];
+        vm.model = {};
 
         vm.get = function() {
-            vm.model = Api.get()
+            vm.model = Api.get(function() {});
         };
     }]);

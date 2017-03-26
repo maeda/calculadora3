@@ -1,5 +1,6 @@
 plugins {
     id 'org.springframework.boot' version '1.5.2.RELEASE'
+    id "com.moowork.gulp" version "1.1.1"
 }
 
 group 'com.example'
@@ -22,4 +23,27 @@ dependencies {
 
 bootRun {
     addResources = true
+}
+
+// makes sure on each build that gulp is installed
+gulp_default.dependsOn 'installGulp'
+
+// processes your package.json before running gulp build
+gulp_default.dependsOn 'npmInstall'
+
+processResources.dependsOn gulp_default
+
+node {
+    nodeModulesDir = file("src/main/resources/static/")
+}
+
+gulp {
+    // Set the directory where gulpfile.js should be found
+    workDir = file("src/main/resources/static/")
+
+    // Whether colors should output on the terminal
+    colors = true
+
+    // Whether output from Gulp should be buffered - useful when running tasks in parallel
+    bufferOutput = false
 }

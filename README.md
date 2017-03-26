@@ -8,4 +8,8 @@ https://waffle.io/maedabr/lerolero-api
 travis-ci: https://travis-ci.org/maedabr/lerolero-api
 
 ## PaaS
-//TODO
+desenvolvimento: https://dashboard.heroku.com/apps/lerolero-dev
+
+teste: https://lerolero-staging.herokuapp.com/
+
+produção: https://lerolero3.herokuapp.com/

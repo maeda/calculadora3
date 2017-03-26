@@ -17,7 +17,7 @@ public class ApiController {
     }
 
     @CrossOrigin(origins = "http://localhost:3000") //TODO (maedabr) pegar a url por ambiente
-    @RequestMapping(name = "/api", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public String generate() {
         return service.generate();

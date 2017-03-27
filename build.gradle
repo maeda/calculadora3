@@ -24,7 +24,7 @@ dependencies {
 bootRun {
     addResources = true
 }
-
+compileJava.dependsOn clean
 // makes sure on each build that gulp is installed
 gulp_default.dependsOn 'installGulp'
 

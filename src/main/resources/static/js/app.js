@@ -3,7 +3,7 @@ angular.module('calculadoraApp', ['ngResource'])
         $resourceProvider.defaults.stripTrailingSlashes = false;
     }])
     .factory('Api', ['$resource', function($resource){
-        return $resource('http://localhost:8080' + '/api', null, {
+        return $resource(window.location.host + '/api', null, {
             'query': {
                 method: 'GET',
                 isArray: false

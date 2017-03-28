@@ -1,15 +1,15 @@
-# lerolero-api
-Microserviço gerador de lero-lero - aplicação para aula de TDD, CI e CD
+# calculadora
+Microserviço calculadora - aplicação para aula de TDD, CI e CD
 
 ## Kanban:
-https://waffle.io/maedabr/lerolero-api
+https://waffle.io/maedabr/calculadora3
 
 ## Pipeline
-travis-ci: https://travis-ci.org/maedabr/lerolero-api
+travis-ci: https://travis-ci.org/maedabr/calculadora3
 
 ## PaaS
-desenvolvimento: https://dashboard.heroku.com/apps/lerolero-dev
+desenvolvimento: https://calculadora-dev.herokuapp.com/
 
-teste: https://lerolero-staging.herokuapp.com/
+teste: https://calculadora-staging.herokuapp.com/
 
-produção: https://lerolero3.herokuapp.com/
+produção: https://calculadora3.herokuapp.com/

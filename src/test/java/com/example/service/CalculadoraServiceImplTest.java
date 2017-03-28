@@ -2,7 +2,7 @@ package com.example.service;
 
 import org.junit.Test;
 
-public class LeroLeroServiceImplTest {
+public class CalculadoraServiceImplTest {
 
     @Test
     public void test() {

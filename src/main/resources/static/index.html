@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="leroleroApp">
+<html lang="en" ng-app="calculadoraApp">
 
 <head>
 
@@ -40,9 +40,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Lero Lero 3.0</h1>
+                        <h1>Calculadora 3.0</h1>
                         <hr class="small">
-                        <span class="subheading">Salvando trabalhos acadêmicos desde sempre = )</span>
+                        <span class="subheading">Operações matemáticas simples e complexas a um clique de distância</span>
                     </div>
                 </div>
             </div>
@@ -52,14 +52,19 @@
     <!-- Main Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" ng-controller="LeroLeroController as ctrl">
-                <p>Gerador de texto que fala e não diz nada, ideal para ajudar os mais sucintos a saber como é ser prolixo.</p>
-                <p>Para utilizar, basta clicar no botão "gerar" e copiar parágrafos inteiros totalmente inúteis!</p>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" ng-controller="CalculadoraController as ctrl">
+                <p>Para utilizar, basta clicar no botão "calcular"!</p>
                 <form name="sentMessage" id="contactForm" novalidate ng-submit="ctrl.get()">
                     <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls" ng-model="ctrl.model">
-                            <label>Texto gerado</label>
-                            <textarea rows="10" class="form-control" placeholder="" id="message" readonly>{{ctrl.model.text}}</textarea>
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Entrada</label>
+                            <input type="text" class="form-control" ng-model="ctrl.model.calculo" placeholder="Digite sua entrada. Ex: 1+1" id="entrada" required data-validation-required-message="Por favor, digite a entrada. Ex: 1+1">
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Resultado</label>
+                            <input type="text" class="form-control" placeholder="Resultado" id="resultado" readonly value="{{ctrl.model.response.resultado}}">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -67,7 +72,7 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <button type="submit" class="btn btn-default">Gerar</button>
+                            <button type="submit" class="btn btn-default">Calcular</button>
                         </div>
                     </div>
                 </form>
@@ -92,7 +97,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Lero Lero 3.0 2017</p>
+                    <p class="copyright text-muted">Copyright &copy; Calculadora 3.0 2017</p>
                 </div>
             </div>
         </div>
@@ -113,7 +118,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.3/angular-resource.min.js"></script>
 
-    <script src="js/lerolero.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 
